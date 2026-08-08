@@ -1,0 +1,381 @@
+/* =========================
+   Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header-container {
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navigation a {
+    font-size: 15px;
+    color: #333;
+
+    transition: color 0.2s ease;
+}
+
+.navigation a:hover {
+    color: #777;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.header-actions a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    transition: transform 0.2s ease;
+}
+
+.header-actions a:hover {
+    transform: translateY(-2px);
+}
+
+.search,
+.cart,
+.account {
+    width: 35px;
+    height: 35px;
+}
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #f7f7f5;
+
+    overflow: hidden;
+}
+
+.hero-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+/* =========================
+   Hero Content
+========================= */
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-label {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin-bottom: 25px;
+
+    font-size: clamp(48px, 6vw, 76px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+.hero p {
+    max-width: 520px;
+
+    margin-bottom: 35px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* =========================
+   Hero Buttons
+========================= */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+
+    padding: 0 25px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.primary-button {
+    background-color: #222;
+
+    color: #fff;
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+
+    background-color: #000;
+}
+
+.secondary-button {
+    border: 1px solid #ccc;
+
+    background-color: #fff;
+
+    color: #222;
+}
+
+.secondary-button:hover {
+    transform: translateY(-2px);
+
+    border-color: #222;
+}
+
+
+/* =========================
+   Hero Visual
+========================= */
+
+.hero-visual {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-wrapper {
+    position: relative;
+
+    width: 430px;
+    height: 430px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-circle {
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    background-color: #e8e5df;
+}
+
+.hero-product {
+    position: relative;
+
+    z-index: 2;
+
+    width: 260px;
+    height: 260px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 25px;
+
+    background-color: #fff;
+
+    font-size: 110px;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+
+    transform: rotate(-5deg);
+
+    transition: transform 0.3s ease;
+}
+
+.hero-product:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        min-height: auto;
+
+        padding: 15px 0;
+
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .navigation {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 20px;
+
+        padding-top: 10px;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+
+        padding: 80px 0;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .hero-image-wrapper {
+        width: 330px;
+        height: 330px;
+    }
+
+    .hero-circle {
+        width: 290px;
+        height: 290px;
+    }
+
+    .hero-product {
+        width: 210px;
+        height: 210px;
+
+        font-size: 85px;
+    }
+
+}
