@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>My Account | Nazafarin</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="container">
+
+            <a
+                href="index.html"
+                class="back-link">
+
+                ← Back to Shop
+
+            </a>
+
+
+            <div class="account-page">
+
+                <div class="account-header">
+
+                    <div>
+
+                        <span class="account-label">
+                            MY ACCOUNT
+                        </span>
+
+                        <h1>
+                            Account Settings
+                        </h1>
+
+                        <p>
+                            Manage your personal information
+                            and account security.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     Profile
+                ========================== -->
+
+                <section class="account-section">
+
+                    <div class="account-section-header">
+
+                        <div>
+
+                            <h2>
+                                Personal Information
+                            </h2>
+
+                            <p>
+                                Update your personal details.
+                            </p>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            id="editProfileButton"
+                            class="account-action-button">
+
+                            Edit Profile
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- View Profile -->
+
+                    <div
+                        id="profileView"
+                        class="profile-grid">
+
+                        <div>
+
+                            <span>
+                                First Name
+                            </span>
+
+                            <strong
+                                id="accountFirstName">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Last Name
+                            </span>
+
+                            <strong
+                                id="accountLastName">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Email
+                            </span>
+
+                            <strong
+                                id="accountEmail">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Phone
+                            </span>
+
+                            <strong
+                                id="accountPhone">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Edit Profile -->
+
+                    <form
+                        id="editProfileForm"
+                        class="account-form"
+                        style="display:none;">
+
+                        <div class="form-grid">
+
+                            <div>
+
+                                <label>
+                                    First Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="editFirstName"
+                                    required>
+
+                            </div>
+
+
+                            <div>
+
+                                <label>
+                                    Last Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="editLastName"
+                                    required>
+
+                            </div>
+
+
+                            <div>
+
+                                <label>
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="editEmail"
+                                    disabled>
+
+                                <small>
+                                    Email cannot be changed.
+                                </small>
+
+                            </div>
+
+
+                            <div>
+
+                                <label>
+                                    Phone
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="editPhone"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="account-form-actions">
+
+                            <button
+                                type="submit"
+                                class="account-primary-button">
+
+                                Save Changes
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                id="cancelEditProfile"
+                                class="account-secondary-button">
+
+                                Cancel
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- =========================
+                     Change Password
+                ========================== -->
+
+                <section class="account-section">
+
+                    <div class="account-section-header">
+
+                        <div>
+
+                            <h2>
+                                Password & Security
+                            </h2>
+
+                            <p>
+                                Keep your account secure.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form
+                        id="changePasswordForm"
+                        class="account-form">
+
+                        <div class="form-grid">
+
+                            <div>
+
+                                <label>
+                                    Current Password
+                                </label>
+
+                                <input
+                                    type="password"
+                                    id="currentPassword"
+                                    required>
+
+                            </div>
+
+
+                            <div></div>
+
+
+                            <div>
+
+                                <label>
+                                    New Password
+                                </label>
+
+                                <input
+                                    type="password"
+                                    id="newPassword"
+                                    minlength="8"
+                                    required>
+
+                            </div>
+
+
+                            <div>
+
+                                <label>
+                                    Confirm New Password
+                                </label>
+
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    minlength="8"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="account-primary-button">
+
+                            Change Password
+
+                        </button>
+
+                    </form>
+
+                </section>
+
+
+                <!-- =========================
+                     Logout
+                ========================== -->
+
+                <section class="account-section logout-section">
+
+                    <div>
+
+                        <h2>
+                            Logout
+                        </h2>
+
+                        <p>
+                            Sign out of your Nazafarin account
+                            on this device.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="accountLogoutButton"
+                        class="logout-button">
+
+                        Logout
+
+                    </button>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="account.js"></script>
+
+</body>
+
+</html>

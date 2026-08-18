@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Orders | Nazafarin Admin</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="admin-layout.css">
+
+</head>
+
+
+<body>
+
+    <div class="admin-layout">
+
+
+        <!-- Sidebar -->
+
+        <aside
+            class="admin-sidebar"
+            id="adminSidebar">
+        </aside>
+
+
+        <!-- Main -->
+
+        <main class="admin-main">
+
+
+            <!-- Header -->
+
+            <header
+                class="admin-header"
+                id="adminHeader">
+            </header>
+
+
+            <!-- Page -->
+
+            <div class="admin-page-content">
+
+
+                <div class="page-intro">
+
+                    <div>
+
+                        <h2>
+                            Orders
+                        </h2>
+
+                        <p>
+                            View and manage all customer orders.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Orders Card -->
+
+                <div class="admin-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                All Orders
+                            </h2>
+
+                            <span class="card-description">
+                                Customer orders
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Order ID
+                                    </th>
+
+                                    <th>
+                                        Customer
+                                    </th>
+
+                                    <th>
+                                        City
+                                    </th>
+
+                                    <th>
+                                        Total
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="ordersTableBody">
+
+                                <tr>
+
+                                    <td colspan="6">
+                                        Loading orders...
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="admin-auth.js"></script>
+
+    <script src="admin-sidebar.js"></script>
+
+    <script src="admin-header.js"></script>
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Nazafarin</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="navigation">
+
+            <a href="index.html" class="logo">
+                Nazafarin
+            </a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#products">
+                Shop
+            </a>
+
+            <a href="index.html#categories">
+                Categories
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="wishlist.html" class="wishlist">
+                ♡
+                <span class="wishlist-count">0</span>
+            </a>
+
+            <a href="index.html" class="cart">
+                🛒
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open menu">
+
+                ☰
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <main class="checkout-page">
+
+        <div class="container">
+
+            <div class="checkout-header">
+
+                <h1>Checkout</h1>
+
+                <p>
+                    Complete your order
+                </p>
+
+            </div>
+
+
+            <div class="checkout-grid">
+
+                <form id="checkoutForm">
+
+                    <!-- Customer Information -->
+
+                    <section class="checkout-section">
+
+                        <h2>Customer Information</h2>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="firstName">
+                                    First Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    name="first_name"
+                                    placeholder="Your first name"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="lastName">
+                                    Last Name
+                                </label>
+
+                                <input
+                                type="text"
+                                id="lastName"
+                                name="last_name"
+                                placeholder="Your last name"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Your phone number"
+                            >
+
+                        </div>
+
+                    </section>
+
+                </form> 
+
+                <!-- Shipping Address -->
+
+                <section class="checkout-section">
+
+                    <h2>Shipping Address</h2>
+
+                    <div class="form-group">
+
+                        <label for="address">
+                            Address
+                        </label>
+
+                        <textarea
+                            id="address"
+                            rows="4"
+                            placeholder="Your full address">
+                        </textarea>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="city">
+                                City
+                            </label>
+
+                            <input
+                                type="text"
+                                id="city"
+                                placeholder="City"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="postalCode">
+                                Postal Code
+                            </label>
+
+                            <input
+                                type="text"
+                                id="postalCode"
+                                placeholder="Postal code"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Order Summary -->
+
+                <section class="checkout-section order-summary">
+
+                    <h2>Order Summary</h2>
+
+                    <div id="checkoutItems">
+
+                        <!-- Products will be inserted by JS -->
+
+                    </div>
+
+
+                    <div class="checkout-total">
+
+                        <span>Total</span>
+
+                        <strong id="checkoutTotal">
+                            $0.00
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="place-order-button"
+                        id="placeOrderButton">
+
+                        Place Order
+
+                    </button>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="checkout.js"></script>
+
+</body>
+
+</html>

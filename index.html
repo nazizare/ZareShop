@@ -1,106 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nazafarin | Online Store</title>
+        <title>Nazafarin | Online Store</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
+    <body>
 
-    <!-- Header -->
-    <header class="header">
+        <!-- Header -->
+        <header class="header">
 
-        <div class="container header-container">
+            <div class="container header-container">
 
-            <!-- Logo -->
-            <a href="#" class="logo">
-             Nazafarin
-            </a>
-
-            <!-- Navigation -->
-            <nav class="navigation">
-
-                <a href="#">Home</a>
-                <a href="#">Shop</a>
-                <a href="#">Categories</a>
-                <a href="#">About</a>
-
-            </nav>
-
-            <!-- Header Actions -->
-            <div class="header-actions">
-
-                <a href="#" class="search" aria-label="Search">
-                    🔍
+                <!-- Logo -->
+                <a href="#" class="logo">
+                Nazafarin
                 </a>
 
-                <a href="#" class="cart" aria-label="Shopping Cart">
-                    🛒
-                </a>
+                <!-- Navigation -->
+                <div class="navigation">
 
-                <a href="#" class="account" aria-label="Account">
-                    👤
-                </a>
+                    <a href="index.html">
+                        Home
+                    </a>
 
-            </div>
+                    <a href="#products">
+                        Shop
+                    </a>
 
-        </div>
+                    <a href="#categories">
+                        Categories
+                    </a>
 
-    </header>
-
-    <!-- Main content -->
-    <main>
-
-        <!-- Hero Section -->
-        <section class="hero">
-
-            <div class="container hero-container">
-
-                <!-- Hero Content -->
-                <div class="hero-content">
-
-                    <span class="hero-label">
-                        NEW COLLECTION 2026
-                    </span>
-
-                    <h1>
-                        Find Something
-                        <span>You’ll Love.</span>
-                    </h1>
-
-                    <p>
-                        Discover carefully selected products,
-                        made to bring style and comfort to your everyday life.
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#" class="hero-button primary-button">
-                            Shop Now
-                        </a>
-
-                        <a href="#" class="hero-button secondary-button">
-                            Explore Collection
-                        </a>
-
-                    </div>
+                    <a href="#about">
+                        About
+                    </a>
 
                 </div>
 
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open menu">
 
-                <!-- Hero Visual -->
-                <div class="hero-visual">
+                    ☰
 
-                    <div class="hero-image-wrapper">
+                </button>
 
-                        <div class="hero-circle"></div>
+                <div class="search-box">
 
-                        <div class="hero-product">
-                            🛍️
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search products..."
+                        autocomplete="off">
+
+                    <button
+                        type="button"
+                        id="searchButton">
+                        🔍
+                    </button>
+
+                </div>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+
+                    <a href="wishlist.html"
+                    class="wishlist"
+                    aria-label="Wishlist">
+
+                        ♡
+
+                        <span class="wishlist-count">
+                            0
+                        </span>
+
+                    </a>
+
+                    <a href="#" class="cart" aria-label="Shopping Cart">
+                        🛒
+                        <span class="cart-count">
+                            0
+                        </span>
+                    </a>
+
+                    <!-- Account -->
+                    <div class="account-wrapper">
+
+                        <button
+                            type="button"
+                            class="account-button"
+                            id="accountButton"
+                            aria-label="Account">
+
+                            👤
+
+                        </button>
+
+
+                        <div
+                            class="account-menu"
+                            id="accountMenu">
+
+                            <!-- Logged Out -->
+
+                            <div
+                                id="loggedOutMenu"
+                                class="account-menu-content">
+
+                                <a href="login.html">
+                                    Sign In
+                                </a>
+
+                                <a href="register.html">
+                                    Create Account
+                                </a>
+
+                            </div>
+
+
+                            <!-- Logged In -->
+
+                            <div
+                                id="loggedInMenu"
+                                class="account-menu-content"
+                                style="display: none;">
+
+                                <p
+                                    id="accountWelcome"
+                                    class="account-welcome">
+                                </p>
+
+                                <a href="account.html">
+                                    My Account
+                                </a>
+
+                                <a href="my-orders.html">
+                                    My Orders
+                                </a>
+
+                                <button
+                                    type="button"
+                                    id="logoutCustomerButton">
+
+                                    Logout
+
+                                </button>
+
+                            </div>
+
                         </div>
 
                     </div>
@@ -109,9 +163,471 @@
 
             </div>
 
+        </header>
+
+        <!-- Main content -->
+        <main>
+
+            <!-- Hero Section -->
+            <section class="hero">
+
+                <div class="container hero-container">
+
+                    <!-- Hero Content -->
+                    <div class="hero-content">
+
+                        <span class="hero-label">
+                            NEW COLLECTION 2026
+                        </span>
+
+                        <h1>
+                            Find Something
+                            <span>You’ll Love.</span>
+                        </h1>
+
+                        <p>
+                            Discover carefully selected products,
+                            made to bring style and comfort to your everyday life.
+                        </p>
+
+                        <div class="hero-buttons">
+
+                            <a href="#products" class="hero-button primary-button">
+                                Shop Now
+                            </a>
+
+                            <a href="#categories" class="hero-button secondary-button">
+                                Explore Collection
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Hero Visual -->
+                    <div class="hero-visual">
+
+                        <div class="hero-image-wrapper">
+
+                            <div class="hero-circle"></div>
+
+                            <div class="hero-product">
+                                🛍️
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Categories Section -->
+            <section id="categories" class="categories">
+
+                <div class="container">
+
+                    <!-- Section Header -->
+                    <div class="section-header">
+
+                        <span class="section-label">
+                            EXPLORE
+                        </span>
+
+                        <h2>
+                            Shop by Category
+                        </h2>
+
+                        <p>
+                            Explore our collections and find exactly what you're looking for.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Categories Grid -->
+                    <div class="categories-grid">
+
+                        <a href="#" class="category-card" data-category="all">
+
+                            <h3>
+                                All Products
+                            </h3>
+
+                        </a>
+
+                        <!-- Category Card -->
+                        <a href="#" class="category-card" data-category="Fashion">
+
+                            <div class="category-icon">
+                                👕
+                            </div>
+
+                            <h3>
+                                Fashion
+                            </h3>
+
+                            <span class="category-link">
+                                Explore →
+                            </span>
+
+                        </a>
+
+
+                        <!-- Category Card -->
+                        <a href="#" class="category-card" data-category="Shoes">
+
+                            <div class="category-icon">
+                                👟
+                            </div>
+
+                            <h3>
+                                Shoes
+                            </h3>
+
+                            <span class="category-link">
+                                Explore →
+                            </span>
+
+                        </a>
+
+
+                        <!-- Category Card -->
+                        <a href="#" class="category-card" data-category="Electronics">
+
+                            <div class="category-icon">
+                                💻
+                            </div>
+
+                            <h3>
+                                Electronics
+                            </h3>
+
+                            <span class="category-link">
+                                Explore →
+                            </span>
+
+                        </a>
+
+
+                        <!-- Category Card -->
+                        <a href="#" class="category-card" data-category="Accessories">
+
+                            <div class="category-icon">
+                                👜
+                            </div>
+
+                            <h3>
+                                Accessories
+                            </h3>
+
+                            <span class="category-link">
+                                Explore →
+                            </span>
+
+                        </a>
+                        
+                    </div>
+
+                </div>
+
+            </section>
+        
+            <!-- Featured Products Section -->
+            <section id="products" class="products">
+
+                <div class="container">
+
+                    <!-- Section Header -->
+                    <div class="section-header products-header">
+
+                        <span class="section-label">
+                            OUR COLLECTION
+                        </span>
+
+                        <h2>
+                            Featured Products
+                        </h2>
+
+                        <p>
+                            Discover some of our most popular products.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Products Grid -->
+                    <div class="products-grid" id="productsGrid">
+
+                    </div>
+                </div>
+            </section>                
+
+            <!-- Special Offer Section -->
+            <section class="special-offer">
+
+                <div class="container">
+
+                    <div class="offer-content">
+
+                        <div class="offer-text">
+
+                            <span class="offer-label">
+                                LIMITED TIME OFFER
+                            </span>
+
+                            <h2>
+                                Up to 40% Off
+                                <span>Selected Products.</span>
+                            </h2>
+
+                            <p>
+                                Don't miss our special offers.
+                                Shop your favorites before the sale ends.
+                            </p>
+
+                            <a href="#products" id="shopSaleButton" class="offer-button">
+                                Shop Sale
+                            </a>
+
+                        </div>
+
+
+                        <div class="offer-visual">
+
+                            <div class="offer-circle">
+                                40%
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="newsletter">
+
+                <div class="container">
+
+                    <div class="newsletter-content">
+
+                        <div class="newsletter-text">
+
+                            <span class="section-label">
+                                STAY UPDATED
+                            </span>
+
+                            <h2>
+                                Get the latest from Nazafarin.
+                            </h2>
+
+                            <p>
+                                Subscribe to our newsletter and be the first
+                                to know about new products, special offers,
+                                and exclusive deals.
+                            </p>
+
+                        </div>
+
+
+                        <form class="newsletter-form">
+
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                aria-label="Email address"
+                                required
+                            >
+
+                            <button type="submit">
+                                Subscribe
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+
+            <div class="about-content">
+
+                <span class="about-label">
+                    ABOUT US
+                </span>
+
+                <h2>
+                    Welcome to Nazafarin
+                </h2>
+
+                <p>
+                    Nazafarin is a modern online store
+                    created to make everyday shopping
+                    simple, beautiful and enjoyable.
+                </p>
+
+                <p>
+                    We carefully select products that
+                    combine quality, style and practicality.
+                </p>
+
+            </div>
+
         </section>
 
-    </main>
+        <!-- Footer -->
+        <footer class="footer">
 
-</body>
+            <div class="container">
+
+                <div class="footer-grid">
+
+                    <!-- Brand -->
+                    <div class="footer-brand">
+
+                        <a href="index.html" class="footer-logo">
+                            Nazafarin
+                        </a>
+
+                        <p>
+                            Discover quality products,
+                            simple shopping, and a better online experience.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Shop -->
+                    <div class="footer-column">
+
+                        <h3>Shop</h3>
+
+                        <a href="index.html#products">All Products</a>
+                        <a href="index.html#categories">Fashion</a>
+                        <a href="index.html#categories">Shoes</a>
+                        <a href="index.html#categories">Electronics</a>
+                        <a href="wishlist.html">
+                            Wishlist ❤️
+                        </a>
+
+                    </div>
+
+
+                    <!-- Support -->
+                    <div class="footer-column">
+
+                        <h3>Support</h3>
+
+                        <a href="index.html#about">Contact Us</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Returns</a>
+                        <a href="#">FAQ</a>
+
+                    </div>
+
+
+                    <!-- Company -->
+                    <div class="footer-column">
+
+                        <h3>Company</h3>
+
+                        <a href="index.html#about">About Us</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+
+                    <p>
+                        © 2026 Nazafarin. All rights reserved.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#" aria-label="Instagram">
+                            Instagram
+                        </a>
+
+                        <a href="#" aria-label="GitHub">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!-- Cart Modal -->
+        <div class="cart-modal" id="cartModal">
+
+            <div class="cart-overlay"></div>
+
+            <div class="cart-panel">
+
+                <div class="cart-header">
+
+                    <h2>Your Cart</h2>
+
+                    <button
+                        class="cart-close"
+                        type="button"
+                        aria-label="Close cart">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be added by JavaScript -->
+                </div>
+
+
+                <div class="cart-footer">
+
+                    <div class="cart-total">
+
+                        <span>Total</span>
+
+                        <strong id="cartTotal">
+                            $0.00
+                        </strong>
+
+                    </div>
+
+                    <button class="clear-cart-button" type="button">
+                        Clear Cart
+                    </button>
+
+                    <button class="checkout-button" type="button">
+                        Checkout
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
 </html>

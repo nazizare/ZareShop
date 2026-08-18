@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Nazafarin</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="admin-layout.css">
+
+</head>
+
+
+<body>
+
+    <div class="admin-layout">
+
+
+        <!-- Sidebar -->
+
+        <aside
+            class="admin-sidebar"
+            id="adminSidebar">
+
+        </aside>
+
+
+        <!-- Main -->
+
+        <main class="admin-main">
+
+
+            <!-- Header -->
+
+            <header
+                id="adminHeader">
+
+            </header>
+
+
+            <div class="container">
+
+
+                <p>
+                    Welcome to Nazafarin Admin Panel
+                </p>
+
+
+                <!-- Statistics -->
+
+                <div class="admin-stats">
+
+
+                    <div class="stat-card">
+
+                        <h2>
+                            Total Orders
+                        </h2>
+
+                        <p id="totalOrders">
+                            0
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <h2>
+                            Total Products
+                        </h2>
+
+                        <p id="totalProducts">
+                            0
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <h2>
+                            Pending Orders
+                        </h2>
+
+                        <p id="pendingOrders">
+                            0
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <h2>
+                            Total Sales
+                        </h2>
+
+                        <p id="totalSales">
+                            $0.00
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Recent Orders -->
+
+                <div class="recent-orders">
+
+                    <h2>
+                        Recent Orders
+                    </h2>
+
+
+                    <table border="1">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Order ID
+                                </th>
+
+                                <th>
+                                    Customer
+                                </th>
+
+                                <th>
+                                    City
+                                </th>
+
+                                <th>
+                                    Total
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Date
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="recentOrdersBody">
+
+                            <tr>
+
+                                <td colspan="6">
+                                    Loading orders...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Quick Actions -->
+
+                <div class="admin-dashboard">
+
+
+                    <div class="admin-card">
+
+                        <h2>
+                            Orders
+                        </h2>
+
+                        <p>
+                            View and manage customer orders.
+                        </p>
+
+                        <a
+                            href="admin-orders.html"
+                            class="admin-button">
+
+                            Manage Orders
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="admin-card">
+
+                        <h2>
+                            Products
+                        </h2>
+
+                        <p>
+                            Add, edit and delete products.
+                        </p>
+
+                        <a
+                            href="admin-products.html"
+                            class="admin-button">
+
+                            Manage Products
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="admin-auth.js"></script>
+
+    <script src="admin-sidebar.js"></script>
+
+    <script src="admin-header.js"></script>
+
+    <script src="admin-dashboard.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Products | Nazafarin Admin</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="admin-layout.css">
+
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+
+        <!-- =========================
+             Sidebar
+        ========================== -->
+
+        <aside
+            class="admin-sidebar"
+            id="adminSidebar">
+        </aside>
+
+
+        <!-- =========================
+             Main Content
+        ========================== -->
+
+        <main class="admin-main">
+
+
+            <!-- =========================
+                 Header
+            ========================== -->
+
+            <header
+                class="admin-header"
+                id="adminHeader">
+            </header>
+
+
+            <!-- =========================
+                 Page Content
+            ========================== -->
+
+            <div class="admin-page-content">
+
+
+                <!-- =========================
+                     Page Intro
+                ========================== -->
+
+                <div class="page-intro">
+
+                    <div>
+
+                        <h2>
+                            Products
+                        </h2>
+
+                        <p>
+                            Add, edit and manage your products.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="addProductButton"
+                        class="admin-button">
+
+                        + Add Product
+
+                    </button>
+
+                </div>
+
+
+                <!-- =========================
+                     Add Product Form
+                ========================== -->
+
+                <form
+                    id="addProductForm"
+                    class="admin-card"
+                    style="display: none;">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Add Product
+                            </h2>
+
+                            <span class="card-description">
+                                Add a new product to your store.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="productName">
+                            Product Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="productName"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="productCategory">
+                            Category
+                        </label>
+
+                        <input
+                            type="text"
+                            id="productCategory"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="productPrice">
+                            Price
+                        </label>
+
+                        <input
+                            type="number"
+                            id="productPrice"
+                            step="0.01"
+                            min="0"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="productImage">
+                            Image URL
+                        </label>
+
+                        <input
+                            type="text"
+                            id="productImage"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="productDescription">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="productDescription"
+                            rows="4">
+                        </textarea>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="admin-button">
+
+                            Add Product
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="cancelAddProduct"
+                            class="admin-button secondary">
+
+                            Cancel
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- =========================
+                     Edit Product Form
+                ========================== -->
+
+                <form
+                    id="editProductForm"
+                    class="admin-card"
+                    style="display: none;">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Edit Product
+                            </h2>
+
+                            <span class="card-description">
+                                Update product information.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <input
+                        type="hidden"
+                        id="editProductId">
+
+
+                    <div class="form-group">
+
+                        <label for="editProductName">
+                            Product Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editProductName"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="editProductCategory">
+                            Category
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editProductCategory"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="editProductPrice">
+                            Price
+                        </label>
+
+                        <input
+                            type="number"
+                            id="editProductPrice"
+                            step="0.01"
+                            min="0"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="editProductImage">
+                            Image URL
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editProductImage"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="editProductDescription">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="editProductDescription"
+                            rows="4">
+                        </textarea>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="admin-button">
+
+                            Update Product
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="cancelEditProduct"
+                            class="admin-button secondary">
+
+                            Cancel
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- =========================
+                     All Products
+                ========================== -->
+
+                <div class="admin-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                All Products
+                            </h2>
+
+                            <span class="card-description">
+                                Manage your store products
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        ID
+                                    </th>
+
+                                    <th>
+                                        Product
+                                    </th>
+
+                                    <th>
+                                        Category
+                                    </th>
+
+                                    <th>
+                                        Price
+                                    </th>
+
+                                    <th>
+                                        Image
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="productsTableBody">
+
+                                <tr>
+
+                                    <td colspan="6">
+                                        Loading products...
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         Scripts
+    ========================== -->
+
+    <script src="admin-auth.js"></script>
+
+    <script src="admin-sidebar.js"></script>
+
+    <script src="admin-header.js"></script>
+
+    <script src="admin-products.js"></script>
+
+</body>
+
+</html>
